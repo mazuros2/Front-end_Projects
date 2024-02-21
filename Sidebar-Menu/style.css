@@ -3,10 +3,9 @@
 :root {
     --body-color: #D3D3D3;
     --sidebar-color: #FFFFFF; 
-    --text-color: ;
-    --toggle-color: ;
+    --text-color: #000000;
+    --toggle-color: #f8b248;
     --primary-color: #FF9900;
-    --primary-color-light: ;
 
     --transition-02: all 0.2s ease;
     --transition-03: all 0.3s ease;
@@ -45,6 +44,7 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
+    font-size: 20px;
 }
 
 .sidebar li a {
@@ -53,7 +53,7 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     border-radius: 6px;
     transition: var(--transition-02);
 }
@@ -140,4 +140,48 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.menu-bar .mode .nightmode {
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar .mode i {
+    position: absolute;
+}
+
+.menu-bar .mode i.sun {
+    opacity: 0;
+}
+
+.menu-bar .mode .toggle-switch {
+    display: flex;
+    height: 100%;
+    min-width: 60px;
+    max-height: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.toggle-switch {
+    height: 22px;
+    width: 44px;
+    background: var(--toggle-color);
+    position: relative;
+    border-radius: 35px;
+}
+
+.toggle-switch::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: var(--sidebar-color);
+    border-radius: 50%;
+    left: 5px;
 }
