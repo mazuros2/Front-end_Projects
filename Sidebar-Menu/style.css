@@ -47,6 +47,11 @@ body.dark {
     transition: var(--transition-03);
 }
 
+.sidebar.close {
+    width: 90px;
+}
+
+
 .sidebar li {
     height: 50px;
     margin-top: 22px;

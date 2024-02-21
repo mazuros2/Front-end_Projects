@@ -8,3 +8,7 @@ const nightmodeText = body.querySelector(".nightmode-text");
 nightmodeSwitch.addEventListener("click", () =>{
     body.classList.toggle("dark");
 });
+
+toggle.addEventListener("click", () =>{
+    sidebar.classList.toggle("close");
+});
