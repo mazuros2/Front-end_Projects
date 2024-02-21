@@ -18,14 +18,23 @@
     padding: 0; 
     font-family: "Raleway", sans-serif; 
     box-sizing: border-box; 
+    transition: var(--transition-03);
 }
 
 body {
     height: 100vh;
     background: var(--body-color);
+    
 }
 
-
+body.dark {
+    --body-color: #222222;
+    --sidebar-color: #333333; 
+    --text-color: #FFFFFF; 
+    --toggle-color: #f8b248;
+    --primary-color: #FF9900;  
+    
+}
 
 .sidebar {
     position: fixed;
@@ -35,6 +44,7 @@ body {
     width: 250px;
     padding: 14px 14px;
     background: var(--sidebar-color);
+    transition: var(--transition-03);
 }
 
 .sidebar li {
@@ -73,7 +83,6 @@ body {
     align-items: center;
     justify-content: center;
     min-width: 60px;
-    
 }
 
 .sidebar li .navigation-text {
@@ -112,6 +121,8 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
+    color: var(--text-color);
+    transition: var(--transition-03);
 }
 
 .header-text .name {
@@ -147,6 +158,11 @@ body {
     width: 60px;
     display: flex;
     align-items: center;
+}
+
+.menu-bar .mode {
+    color: var(--text-color);
+    transition: var(--transition-03);
 }
 
 .menu-bar .mode i {
