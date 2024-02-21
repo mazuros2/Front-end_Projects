@@ -5,7 +5,7 @@
     --sidebar-color: #FFFFFF; 
     --text-color: ;
     --toggle-color: ;
-    --primary-color: ;
+    --primary-color: #FF9900;
     --primary-color-light: ;
 
     --transition-02: all 0.2s ease;
@@ -27,6 +27,7 @@ body {
 }
 
 
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -35,6 +36,56 @@ body {
     width: 250px;
     padding: 14px 14px;
     background: var(--sidebar-color);
+}
+
+.sidebar li {
+    height: 50px;
+    margin-top: 22px;
+    margin-left: 12px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li a {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 6px;
+    transition: var(--transition-02);
+}
+
+.sidebar li a:hover {
+    background: var(--primary-color);
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .navigation-text {
+    color:var(--sidebar-color);
+    transition: var(--transition-02);
+}
+
+.sidebar li .icon {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    
+}
+
+.sidebar li .navigation-text {
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+
+
+.sidebar header {
+    position: relative;
+    margin-left: 15px;
 }
 
 .sidebar .logo-userInfo img{
@@ -50,8 +101,36 @@ body {
 .sidebar header .profile-pic {
     width: 45px;
     height: auto;
+    border-radius: 50%;
+    background: var(--primary-color);
+    margin-right: 15px;
+    margin-top: 25px;
 }
 
 .sidebar .header-text {
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.header-text .name {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    height: 35px;
+    width: 35px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--sidebar-color);
+    font-size: 24px;
 }
