@@ -134,3 +134,10 @@ body {
     color: var(--sidebar-color);
     font-size: 24px;
 }
+
+.sidebar .menu-bar {
+    height: calc(90% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
