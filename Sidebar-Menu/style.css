@@ -220,6 +220,10 @@ body.dark .menu-bar .mode i.moon {
     cursor: pointer;
 }
 
+.sidebar.close .menu-bar .mode .toggle-switch {
+    right: 8px;
+}
+
 .toggle-switch {
     height: 22px;
     width: 44px;
