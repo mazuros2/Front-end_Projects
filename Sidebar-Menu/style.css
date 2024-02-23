@@ -104,8 +104,6 @@ body.dark {
     margin-top: 2px;
 }
 
-
-
 .sidebar header {
     position: relative;
     margin-left: 15px;
@@ -115,6 +113,25 @@ body.dark {
     width: 175px;
     height: auto;
 }
+
+.sidebar .logo-userInfo .img .small-logo {
+    position: absolute;
+    opacity: 0;
+    width: 90px;
+    top: -15px;
+    left: -24px;
+}
+
+.sidebar.close .logo-userInfo .img .small-logo {
+    opacity: 1;
+    transition: var(--transition-03);
+}
+
+.sidebar.close .logo-userInfo .img .big-logo {
+    opacity: 0;
+    transition: var(--transition-03);
+}
+
 
 .sidebar header .user-profileImg {
     display: flex;
