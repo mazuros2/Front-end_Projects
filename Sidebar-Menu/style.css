@@ -149,7 +149,7 @@ body.dark {
     position: absolute;
     top: 58%;
     right: -30px;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(180deg);
     height: 35px;
     width: 35px;
     background: var(--primary-color);
@@ -161,6 +161,11 @@ body.dark {
     font-size: 24px;
 }
 
+.sidebar.close header .toggle{
+    transform: translateY(-50%);
+    transition: var(--transition-03);
+}
+
 .sidebar .menu-bar {
     height: calc(90% - 20px);
     display: flex;
@@ -170,22 +175,31 @@ body.dark {
 
 .menu-bar .mode .nightmode {
     height: 50px;
-    width: 60px;
+    width: 52px;
     display: flex;
     align-items: center;
     margin-left: 4px;
 }
 
 .menu-bar .mode {
+    position: relative;
     color: var(--text-color);
-    transition: var(--transition-03);
 }
 
 .menu-bar .mode i {
     position: absolute;
+    transition: var(--transition-02);
 }
 
 .menu-bar .mode i.sun {
+    opacity: 0;
+}
+
+body.dark .menu-bar .mode i.sun {
+    opacity: 1;
+}
+
+body.dark .menu-bar .mode i.moon {
     opacity: 0;
 }
 
@@ -194,9 +208,11 @@ body.dark {
 }
 
 .menu-bar .mode .toggle-switch {
+    position: absolute;
+    right: 0;
     display: flex;
     height: 100%;
-    min-width: 60px;
+    min-width: 50px;
     max-height: 30px;
     align-items: center;
     justify-content: center;
@@ -224,5 +240,5 @@ body.dark {
 }
 
 body.dark .toggle-switch::before {
-    left: 35px;
+    left: 25px;
 }
